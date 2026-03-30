@@ -84,3 +84,21 @@ databaseChangeLog:
         - sqlFile:
             path: 11_rollbacks/01_tables/0005_drop_table_category.sql
             stripComments: false
+
+
+  - changeSet:
+      id: e3b7a9d1-5c2f-4a8e-b6d3-7f1c9a2e4b68
+      author: mariaj_rodriguez32@soy.sena.edu.co
+      context: product 
+      labels: HU-06
+      comment: Create table product 
+      changes:
+        - tagDatabase:
+            tag: v6.0.0
+        - sqlFile:
+            path: 01_tables/0006_create_table_product.sql
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/01_tables/0006_drop_table_product.sql
+            stripComments: false
