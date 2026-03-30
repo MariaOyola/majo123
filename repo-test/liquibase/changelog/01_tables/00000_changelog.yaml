@@ -49,3 +49,20 @@ databaseChangeLog:
         - sqlFile:
             path: 11_rollbacks/01_tables/0003_drop_table_person.sql
             stripComments: false
+
+  - changeSet:
+      id: 9c5a2e7f-1d84-4b6c-8f3a-2e9d7b1c6a45
+      author: mariaj_rodriguez32@soy.sena.edu.co
+      context: users
+      labels: HU-04
+      comment: Create table users
+      changes:
+        - tagDatabase:
+            tag: v4.0.0
+        - sqlFile:
+            path: 01_tables/0004_create_table_users.sql
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/01_tables/0004_drop_table_users.sql
+            stripComments: false
