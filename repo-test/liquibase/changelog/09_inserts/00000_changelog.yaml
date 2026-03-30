@@ -13,3 +13,18 @@ databaseChangeLog:
         - sqlFile:
             path: 11_rollbacks/09_inserts/0001_delete_status.sql
             stripComments: false
+
+  - changeSet:
+      id: 6f2d9c10-3a8b-4e71-b5c2-9d4a7f0e2c63
+      author: mariaj_rodriguez32@soy.sena.edu.co
+      labels: HU-02
+      context: data
+      comment: Insert initial data into type_document
+      changes:
+        - sqlFile:
+            path: 09_inserts/0002_insert_type_document.sql
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/09_inserts/0002_delete_type_document.sql
+            stripComments: false

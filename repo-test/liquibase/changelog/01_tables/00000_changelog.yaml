@@ -15,3 +15,20 @@ databaseChangeLog:
         - sqlFile:
             path: 11_rollbacks/01_tables/0001_create_table_status.sql
             stripComments: false
+
+  - changeSet:
+      id: b8a1f3d2-9c47-4f6b-a1e3-2d7c9b5e8f01
+      author: mariaj_rodriguez32@soy.sena.edu.co
+      context: type_document
+      labels: HU-02
+      comment: Create table type_document
+      changes:
+        - tagDatabase:
+            tag: v2.0.0
+        - sqlFile:
+            path: 01_tables/0002_create_table_type_document.sql
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/01_tables/0002_drop_table_type_document.sql
+            stripComments: false
