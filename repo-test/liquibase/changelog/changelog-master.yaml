@@ -3,3 +3,5 @@ databaseChangeLog:
       file: 01_tables/00000_changelog.yaml
   - include:
       file: 09_inserts/00000_changelog.yaml
+  - include:
+     file: 11_rollbacks/09_inserts/0002_delete_type_document.sql
