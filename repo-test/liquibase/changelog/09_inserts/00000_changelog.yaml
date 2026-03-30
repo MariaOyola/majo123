@@ -73,3 +73,18 @@ databaseChangeLog:
         - sqlFile:
             path: 11_rollbacks/09_inserts/0005_delete_category.sql
             stripComments: false
+
+  - changeSet:
+      id: 2a9f6c3e-8b14-4d7a-a5c2-9e1f7b3d6c40
+      author: mariaj_rodriguez32@soy.sena.edu.co
+      labels: HU-06
+      context: data
+      comment: Insert initial data into product
+      changes:
+        - sqlFile:
+            path: 09_inserts/0006_insert_product.sql
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/09_inserts/0006_delete_product.sql
+            stripComments: false
