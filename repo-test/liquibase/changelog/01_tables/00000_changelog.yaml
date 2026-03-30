@@ -66,3 +66,21 @@ databaseChangeLog:
         - sqlFile:
             path: 11_rollbacks/01_tables/0004_drop_table_users.sql
             stripComments: false
+
+
+  - changeSet:
+      id: 6e2d9a4c-3b71-4f8a-a5d2-1c9b7e6f0a34
+      author: mariaj_rodriguez32@soy.sena.edu.co
+      context: category
+      labels: HU-05
+      comment: Create table category
+      changes:
+        - tagDatabase:
+            tag: v5.0.0
+        - sqlFile:
+            path: 01_tables/0005_create_table_category.sql
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/01_tables/0005_drop_table_category.sql
+            stripComments: false
