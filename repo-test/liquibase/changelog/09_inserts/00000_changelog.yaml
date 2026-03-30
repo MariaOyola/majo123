@@ -58,3 +58,18 @@ databaseChangeLog:
         - sqlFile:
             path: 11_rollbacks/09_inserts/0004_delete_users.sql
             stripComments: false
+
+  - changeSet:
+      id: b4c8f1e7-9a63-4d2b-8e5f-3a1c7d9e6b20
+      author: mariaj_rodriguez32@soy.sena.edu.co
+      labels: HU-05
+      context: data
+      comment: Insert initial data into category 
+      changes:
+        - sqlFile:
+            path: 09_inserts/0005_insert_category.sql
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/09_inserts/0005_delete_category.sql
+            stripComments: false
