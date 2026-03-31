@@ -102,3 +102,20 @@ databaseChangeLog:
         - sqlFile:
             path: 11_rollbacks/01_tables/0006_drop_table_product.sql
             stripComments: false
+
+        - changeSet:
+      id: 5d8c2a71-3f94-4b6e-a1c7-9e2f6d3b8a40
+      author: mariaj_rodriguez32@soy.sena.edu.co
+      context: orders
+      labels: HU-07
+      comment: Create table orders
+      changes:
+        - tagDatabase:
+            tag: v7.0.0
+        - sqlFile:
+            path: 01_tables/0007_create_table_orders.sql
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/01_tables/0007_drop_table_orders.sql
+            stripComments: false
